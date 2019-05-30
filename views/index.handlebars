@@ -3,55 +3,54 @@
         <h1 class="indigo-text text-lighten-5">Eat-Da-Burger</h1>
     </div>
 
-    <div class="flex flex-wrap">
-        <div>
-            <div class="center-align">
+    <div class="row">
+        <div class="left-align s6">
+            <ul>
+                {{#each burgers}}
+                {{#unless this.devoured}}
                 <div>
-                    <ul>
-                        {{#each burgers}}
-                        {{#unless this.devoured}}
-                        <div>
-                            <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
-                                <ul>
-                                    <li class='burgerAvailable'>
-                                        {{this.id}} {{this.burger_name}}
-                                        <button type="submit" class="devourBurger">Devour!</button>
-                                    </li>
-                                </ul>
+                    <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
+                        <ul>
+                            <li class='burgerAvailable'>
+                                {{this.id}} {{this.burger_name}}
+                                <button type="submit" class="devourBurger">Devour!</button>
+                            </li>
+                        </ul>
 
-                            </form>
-                        </div>
-                        {{/unless}}
-                        {{/each}}
-                    </ul>
-
-
-                    <ul>
-                        {{#each burgers}}
-                        {{#if this.devoured}}
-                        <div class='burgerEaten'>
-                            <div>
-                                {{this.burger_name}}
-                            </div>
-                        </div>
-                        {{/if}}
-                        {{/each}}
-                    </ul>
-                    <hr>
-                    <br><br>
-                    <h4>Add A Burger Option</h4>
-
-                    <div class="row">
-                        <div>
-                            <form action="/burgers" method="POST">
-                                <input type="text" id="name" name="burger_name" placeholder="Your Burger Name">
-                                <button type="submit" class="addBurger">Add The Burger</button>
-                            </form>
-                        </div>
-                    </div>
-
+                    </form>
                 </div>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+
+        <div class="right-align s6">
+            <ul>
+                {{#each burgers}}
+                {{#if this.devoured}}
+                <div class='burgerEaten'>
+                    <div>
+                        {{this.burger_name}}
+                    </div>
+                </div>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+        <div class="row center-align s12">
+            <hr>
+            <br><br>
+            <h4>Add A Burger Option</h4>
+            <div>
+                <form action="/burgers" method="POST">
+                    <input type="text" id="name" name="burger_name" placeholder="Your Burger Name">
+                    <button type="submit" class="addBurger">Add The Burger</button>
+                </form>
             </div>
         </div>
     </div>
+</div>
+</div>
 </div>
