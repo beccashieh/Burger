@@ -13,7 +13,7 @@ This is a burger logging app that let's the user "devour" existing burgers, or a
 
 ## Instructions
 
-- To run the program locally, you will need to clone the repo to your machine. (Click here)[https://github.com/beccashieh/Burger]
+- To run the program locally, you will need to clone the repo to your machine. [Click here](https://github.com/beccashieh/Burger)
 - From your command line, cd into the folder and run the following commands:
 
 ```
