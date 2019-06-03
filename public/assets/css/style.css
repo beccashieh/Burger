@@ -1,3 +1,21 @@
-h5 {
-    background-color: black;
+.card-panel {
+    background-color: rgb(163, 49, 4)!important;
+}
+
+body {
+        background-image: url("../img/burger.jpg");
+        background-repeat: repeat;
+        background-color: #cccccc;
+        border-radius: 10px;
+}
+
+.container {
+    background-color: rgb(39, 40, 41, .8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+ul, h4 {
+    color: #cccccc;
+    padding: 10px;
 }

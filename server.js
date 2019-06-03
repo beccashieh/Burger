@@ -5,6 +5,7 @@ const PORT = process.env.PORT || 8080;
 
 const app = express();
 
+//Pulls data from the public folder
 app.use(express.static('public'));
 
 app.use(express.urlencoded({ extended: true }));
@@ -15,8 +16,6 @@ var exphbs = require('express-handlebars');
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
-
-app.use(express.static(path.join(__dirname, '/public')));
 
 
 //Import routes and gives server access to them.
